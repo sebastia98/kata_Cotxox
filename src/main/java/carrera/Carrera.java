@@ -1,4 +1,5 @@
 package carrera;
+import tarifa.Tarifa;
 
 public class Carrera {
 	
@@ -51,9 +52,8 @@ public class Carrera {
 		return this.tiempoEsperado;
 	}
 
-	public String getCosteEsperado() {
-		// Le pregunta a Tarifa el costeEsperado
-		return null;
+	public Object getCosteEsperado() {
+		return Tarifa.getCosteTotal(this);
 	}
 	
 	
