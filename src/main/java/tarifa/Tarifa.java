@@ -18,5 +18,4 @@ public class Tarifa {
 		double costeTotal = getCosteDistancia(carrera.getDistancia()) + getCosteMinuto(carrera.getTiempoEstimado());
 		return costeTotal > costeMinimo ? costeTotal : "No supera el mínimo"; 
 	}
-	
 }
