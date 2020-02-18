@@ -1,4 +1,8 @@
 package carrera;
+import java.util.ArrayList;
+
+import conductor.Conductor;
+import poolConductores.PoolConductores;
 import tarifa.Tarifa;
 
 public class Carrera {
@@ -54,6 +58,11 @@ public class Carrera {
 
 	public Object getCosteEsperado() {
 		return Tarifa.getCosteTotal(this);
+	}
+
+	public void asignarConductor(ArrayList<Conductor> conductores) {
+		PoolConductores poolConductores = new PoolConductores(conductores);
+		poolConductores.asignarConductor();
 	}
 	
 	
