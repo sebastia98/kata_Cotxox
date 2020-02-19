@@ -12,6 +12,9 @@ public class Carrera {
 	private String destino = null;
 	private double distancia = 0d;
 	private int tiempoEsperado = 0;
+	private Conductor conductor = null;
+	private Object costeTotal = null;
+	private double propina = 0d;
 
 	public Carrera(String tarjetaCredito) {
 		this.tarjetaCredito = tarjetaCredito;
@@ -59,11 +62,34 @@ public class Carrera {
 	public Object getCosteEsperado() {
 		return Tarifa.getCosteTotal(this);
 	}
-
-	public void asignarConductor(ArrayList<Conductor> conductores) {
-		PoolConductores poolConductores = new PoolConductores(conductores);
-		poolConductores.asignarConductor();
+	/*a la carrera le pasas un conductor*/
+	public void asignarConductor(PoolConductores conductores) {
+		this.conductor = conductores.asignarConductor();
 	}
-	
-	
+
+	public Conductor getConductor() {
+		return this.conductor;
+	}
+
+	public void realizarPago(Object costeEsperado) {
+		costeTotal = costeEsperado;
+	}
+
+	public void recibirPropina(double propina) {
+		this.propina = propina;
+	}
+
+	public double getPropina() {
+		// TODO Auto-generated method stub
+		return this.propina;
+	}
+
+	public Object getCosteTotal() {
+		// TODO Auto-generated method stub
+		return this.costeTotal;
+	}
+
+	/*public void liberarConductor() {
+	 
+	}*/	
 }

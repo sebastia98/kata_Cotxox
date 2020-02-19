@@ -6,6 +6,7 @@ public class Conductor {
 	private String matricula;
 	private String modelo;
 	private byte valoracion;
+	private boolean ocupado = true;
 	
 	public Conductor(String nombre) {
 		this.nombre = nombre;
@@ -19,6 +20,9 @@ public class Conductor {
 	public void setValoracion(byte valoracion) {
 		this.valoracion = valoracion;
 	}
+	/*public static void setOcupado() {
+		ocupado = true;
+	}*/
 	public String getNombre() {
 		return this.nombre;
 	}
@@ -30,5 +34,8 @@ public class Conductor {
 	}
 	public byte getValoracion() {
 		return this.valoracion;
+	}
+	public boolean isOcupado() {
+		return ocupado;
 	}
 }

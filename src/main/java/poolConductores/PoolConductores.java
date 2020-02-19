@@ -1,6 +1,7 @@
 package poolConductores;
 
 import java.util.ArrayList;
+import java.util.concurrent.ThreadLocalRandom;
 
 import conductor.Conductor;
 
@@ -14,8 +15,8 @@ public class PoolConductores {
 	public ArrayList<Conductor> getPoolConductores() {
 		return this.poolConductores;
 	}
-	public void asignarConductor() {
-		// TODO Auto-generated method stub
-		
+	public Conductor asignarConductor() {
+		/*Conductor.setOcupado();*/
+		return this.getPoolConductores().get(ThreadLocalRandom.current().nextInt(0, getPoolConductores().size()));	
 	}
 }

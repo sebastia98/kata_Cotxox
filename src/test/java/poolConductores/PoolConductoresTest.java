@@ -10,7 +10,7 @@ import conductor.Conductor;
 
 public class PoolConductoresTest {
 
-	/*@Test
+	@Test
 	public void test() {
 		ArrayList<Conductor> poolConductores = new ArrayList<>();
 		Conductor conductor = null;
@@ -19,9 +19,19 @@ public class PoolConductoresTest {
 			conductor = new Conductor(nombre);
 			poolConductores.add(conductor);
 		}
+		String[] matricula = { "4ABC123", "5DHJ444", "7JKK555" };
+		String[] modelos = { "Chevy Malibu", "Toyota Prius", "Mercedes A" };
+
+		int index = 0;
+		for (Conductor conductora : poolConductores) {
+			conductora.setMatricula(matricula[index]);
+			conductora.setModelo(modelos[index]);
+			conductora.setValoracion((byte) 4);
+			index++;
+		}
 		PoolConductores conductores = new PoolConductores(poolConductores);
-		assertArrayEquals(poolConductores, conductores.getPoolConductores());
-	}*/
+		conductores.getPoolConductores().equals(poolConductores);
+	}
 	
 	
 

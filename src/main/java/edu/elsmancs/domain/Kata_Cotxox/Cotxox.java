@@ -84,7 +84,7 @@ public class Cotxox {
 
 		// Info por pantalla
 
-		System.out.println("Driver: " + carrera.getConductor().getNombre());
+		System.out.println("Driver: " + (carrera).getConductor().getNombre());
 		System.out.println("Type: " + carrera.getConductor().getModelo());
 		System.out.println("Matricula: " + carrera.getConductor().getMatricula());
 		System.out.println("Stars: " + carrera.getConductor().getValoracion());
@@ -103,7 +103,7 @@ public class Cotxox {
 
 		carrera.realizarPago(carrera.getCosteEsperado());
 		carrera.recibirPropina(1);
-		carrera.liberarConductor();
+		/*carrera.liberarConductor();*/
 
 		System.out.println("Driver: " + carrera.getConductor().getNombre());
 		System.out.println("TIP: " + carrera.getPropina());
